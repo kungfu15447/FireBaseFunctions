@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/functions/src/Models/user.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/Roles/role.controller.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Roles/role.controller.firebase.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/Roles/role.repository.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Roles/role.repository.firebase.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/Roles/role.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Roles/role.repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/Roles/role.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Roles/role.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584354625966</updated>
       <workItem from="1584354627175" duration="1801000" />
-      <workItem from="1584520412909" duration="4882000" />
+      <workItem from="1584520412909" duration="5347000" />
     </task>
     <servers />
   </component>
