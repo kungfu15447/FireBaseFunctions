@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/functions/src/Models/role.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/Roles/role.controller.firebase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/Roles/role.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/Roles/role.repository.firebase.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/Roles/role.repository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions/src/Roles/role.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/index.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,6 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\Dokumenter\GitHub\FireBaseFunctions\functions\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -48,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584354625966</updated>
       <workItem from="1584354627175" duration="1801000" />
-      <workItem from="1584520412909" duration="1076000" />
+      <workItem from="1584520412909" duration="3417000" />
     </task>
     <servers />
   </component>
