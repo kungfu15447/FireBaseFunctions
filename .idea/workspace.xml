@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/dependency-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/dependency-factory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/test/roles/role.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/test/roles/role.service.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +59,7 @@
       <updated>1584354625966</updated>
       <workItem from="1584354627175" duration="1801000" />
       <workItem from="1584520412909" duration="5347000" />
-      <workItem from="1584951786637" duration="3503000" />
+      <workItem from="1584951786637" duration="5336000" />
     </task>
     <servers />
   </component>
