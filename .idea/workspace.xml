@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/dependency-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/dependency-factory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FireBaseAuth" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="D:\Dokumenter\GitHub\FireBaseFunctions\functions\node_modules\typescript\lib" />
   </component>
@@ -57,6 +60,7 @@
       <updated>1584354625966</updated>
       <workItem from="1584354627175" duration="1801000" />
       <workItem from="1584520412909" duration="5347000" />
+      <workItem from="1584951786637" duration="3503000" />
     </task>
     <servers />
   </component>
@@ -68,7 +72,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
