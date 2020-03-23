@@ -10,12 +10,12 @@ describe('RoleService', () => {
     let roleAfter: Role = {name: 'defaulty', isDefault: true}
     beforeEach(() => {
         roleRepository = new Mock<RoleRepository>()
-            /*.setup(rr => rr.setRenamedRoleOnUsers(roleBefore, roleAfter))
-            .returns(new Promise((resolve, reject) => {resolve()}));*/
+            .setup(rr => rr.setRenamedRoleOnUsers(roleBefore, roleAfter))
+            .returns(new Promise((resolve, reject) => {resolve()}));
         roleService = new RoleService(roleRepository.object());
     });
 
     it('renameRole method in RoleService returns a promise', async () => {
-        expect(roleService.renameRole(roleBefore, roleAfter)).toBe(Promise);
+        expect(roleService.renameRole(roleBefore, roleAfter)).toBe({});
     })
 });
