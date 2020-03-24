@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="" />
+    <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Roles/role.repository.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Roles/role.repository.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Roles/role.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Roles/role.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Roles/role.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Roles/role.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/test/roles/role.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/test/roles/role.service.test.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +62,7 @@
       <workItem from="1584354627175" duration="1801000" />
       <workItem from="1584520412909" duration="5347000" />
       <workItem from="1584951786637" duration="7047000" />
+      <workItem from="1585047983758" duration="6268000" />
     </task>
     <servers />
   </component>

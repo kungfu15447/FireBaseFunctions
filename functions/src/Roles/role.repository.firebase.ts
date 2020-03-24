@@ -5,20 +5,19 @@ import {User} from "../Models/user.module";
 
 export class RoleRepositoryFirebase implements RoleRepository{
 
-    setRenamedRoleOnUsers(roleBefore: Role, roleAfter: Role): Promise<any> {
+    async setRenamedRoleOnUsers(roleBefore: Role, roleAfter: Role): Promise<Role> {
         const userCollection = this.db().collection('users');
-        return userCollection.get()
-            .then(snapshot => {
-                snapshot.forEach(doc => {
-                    const user = doc.data() as User;
-                    if (user.role === roleBefore.name) {
-                        user.role = roleAfter.name
-                        return doc.ref.update(user);
-                    }else {
-                        return null;
-                    }
-                })
-            })
+        const snapshot = await userCollection.get();
+        snapshot.forEach(doc => {
+            const user = doc.data() as User;
+            if (user.role === roleBefore.name) {
+                user.role = roleAfter.name
+                return doc.ref.update(user);
+            }else {
+                return null;
+            }
+        });
+        return Promise.resolve(roleAfter);
     }
 
     db(): FirebaseFirestore.Firestore{
