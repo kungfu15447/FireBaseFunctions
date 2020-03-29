@@ -14,6 +14,12 @@ exports.renameRoles = functions.firestore
         return difa.getRoleController().renameRole(change, context);
     })
 
+exports.addStock = functions.firestore
+    .document('products/{productID}')
+    .onCreate((snapshot, context) => {
+
+    })
+
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //
