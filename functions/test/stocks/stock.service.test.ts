@@ -1,8 +1,8 @@
-import {StockRepository} from "../../src/Stocks/stock.repository";
+import {StockRepository} from '../../src/Stocks/stock.repository';
 import {IMock, Mock, Times} from 'moq.ts';
-import {StockService} from "../../src/Stocks/stock.service";
-import {Product} from "../../src/Models/product.module";
-import {Stock} from "../../src/Models/stock.module";
+import {StockService} from '../../src/Stocks/stock.service';
+import {Product} from '../../src/Models/product.module';
+import {Stock} from '../../src/Models/stock.module';
 
 describe('StockService', () => {
    let stockRepository: IMock<StockRepository>;
@@ -25,5 +25,11 @@ describe('StockService', () => {
         await stockService.addStock(product);
         stockRepository.verify(sr => sr.addStock(stock),
             Times.Exactly(1));
+    })
+
+    it('If product is undefined in addStock parameter, return promise with undefined', async () => {
+        const undefinedProduct = undefined as any;
+        const stockPromise = await stockService.addStock(undefinedProduct);
+        expect(stockPromise).toBeUndefined();
     })
 });

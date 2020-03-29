@@ -9,8 +9,12 @@ export class StockService {
     constructor(private stockRepository: StockRepository) {}
 
     addStock(product: Product): Promise<any> {
-        const stock: Stock = this.createStockWithAmount(product)
-        return this.stockRepository.addStock(stock);
+        if (product) {
+            const stock: Stock = this.createStockWithAmount(product)
+            return this.stockRepository.addStock(stock);
+        }else {
+            return Promise.resolve(undefined as any);
+        }
     }
 
     createStockWithAmount(product: Product): Stock {
