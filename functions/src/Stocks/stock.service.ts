@@ -19,15 +19,7 @@ export class StockService {
     }
 
     removeStock(order: Order): Promise<any> {
-        order.orderLines.forEach( product => {
-            this.stockRepository.getStockByName(product.productName).then(stock => {
-                if (stock) {
-                    this.subtrackAmountfromStock(stock, product.amount);
-                    this.stockRepository.updateStockAmount(stock);
-                }
-            });
-        });
-        return Promise.resolve();
+        return this.stockRepository.updateStockFromOrder(order);
     }
 
     createStockWithAmount(product: Product): Stock {

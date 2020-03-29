@@ -20,8 +20,8 @@ exports.addStock = functions.firestore
         return difa.getStockController().addStock(snapshot, context);
     })
 
-exports.removeStock = functions.firestore
-    .document('order/{orderID}')
+exports.decreaseStockByAmount = functions.firestore
+    .document('orders/{orderID}')
     .onCreate(((snapshot, context) => {
         return difa.getStockController().removeStock(snapshot, context);
     }))

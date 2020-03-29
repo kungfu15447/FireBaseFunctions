@@ -1,12 +1,10 @@
 import {StockRepository} from "./stock.repository";
 import {Stock} from "../Models/stock.module";
 import * as admin from "firebase-admin";
+import {Order} from "../Models/order.module";
 
 export class StockRepositoryFirebase implements StockRepository {
 
-    constructor() {
-
-    }
     addStock(stock: Stock): Promise<any> {
         const stockCollection = this.db().collection('stocks');
         return stockCollection.add(stock);
@@ -20,7 +18,7 @@ export class StockRepositoryFirebase implements StockRepository {
         const stocks: Stock[] = [];
         const stockCollection = this.db().collection('stocks');
         const snapshot = await stockCollection.get();
-        await snapshot.forEach(doc => {
+        snapshot.forEach(doc => {
            const stock = doc.data() as Stock;
            stocks.push(stock);
         });
@@ -30,29 +28,30 @@ export class StockRepositoryFirebase implements StockRepository {
     async getStockByName(name: string): Promise<Stock> {
         let stock = undefined as any;
         const stockCollection = this.db().collection('stocks');
-        const snapshot = await  stockCollection.get();
-        await snapshot.forEach(doc => {
+        const snapshot = await stockCollection.get();
+        snapshot.forEach(doc => {
             const stockDoc = doc.data() as Stock;
-            if (stockDoc.productName == name) {
+            if (stockDoc.productName === name) {
                 stock = stockDoc;
             }
         });
         return Promise.resolve(stock);
     }
 
-    async updateStockAmount(stock: Stock): Promise<any> {
+    async updateStockFromOrder(order: Order): Promise<any> {
         const stockCollection = this.db().collection('stocks');
-        const snapshot = await  stockCollection.get();
+        const snapshot = await stockCollection.get();
         snapshot.forEach(doc => {
-            const stockDoc = doc.data() as Stock;
-            if (stockDoc.productName == stock.productName) {
-                stockDoc.stockAmount = stock.stockAmount;
-                return doc.ref.update(stockDoc);
-            }else {
-                return null
-            }
-        })
-        return Promise.resolve(stock);
+            const stock = doc.data() as Stock;
+            order.orderLines.forEach(function (orderLine) {
+                if (stock.productName === orderLine.productName) {
+                    const newAmount = stock.stockAmount - orderLine.amount;
+                    stock.stockAmount = newAmount;
+                }
+            });
+            return doc.ref.update(stock);
+        });
+        return Promise.resolve();
     }
 
 }
