@@ -8,15 +8,15 @@ export class StockService {
 
     constructor(private stockRepository: StockRepository) {}
 
-    addStock(product: Product): Promise<Stock> {
-        this.stockRepository;
-        return Promise.resolve(undefined as any);
+    addStock(product: Product): Promise<any> {
+        const stock: Stock = this.createStockWithAmount(product)
+        return this.stockRepository.addStock(stock);
     }
 
     createStockWithAmount(product: Product): Stock {
         const stock: Stock = {
             productName: product.name,
-            stock: this.defaultStockAmount
+            stockAmount: this.defaultStockAmount
         };
         return stock;
     }

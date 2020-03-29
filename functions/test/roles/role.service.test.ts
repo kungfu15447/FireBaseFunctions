@@ -17,11 +17,8 @@ describe('RoleService', () => {
 
     it('repoRepository method setRenamedRoleOnUsers get called once in RoleService', async () => {
         await roleService.renameRole(roleBefore, roleAfter);
-        roleRepository.verify(rr => rr.setRenamedRoleOnUsers(roleBefore, roleAfter)
-            , Times.Exactly(1));
-        /*return roleService.renameRole(roleBefore, roleAfter).then(value => {
-            expect(value).toBe(Promise);
-        });*/
+        roleRepository.verify(rr => rr.setRenamedRoleOnUsers(roleBefore, roleAfter),
+            Times.Exactly(1));
     })
 
     it('renameRole method in RoleService returns a promise with undefined if roleBefore or roleAfter is null/undefined', async () => {

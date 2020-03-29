@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/functions/src/Models/product.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/src/Models/stock.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.controller.firebase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.repository.firebase.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions/test/stocks/stock.service.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Models/product.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Models/product.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Models/stock.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Models/stock.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Stocks/stock.controller.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.controller.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Stocks/stock.repository.firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.repository.firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Stocks/stock.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/Stocks/stock.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/Stocks/stock.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/src/dependency-factory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/dependency-factory.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/test/roles/role.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/test/roles/role.service.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/functions/test/stocks/stock.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/test/stocks/stock.service.test.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
       <workItem from="1584951786637" duration="7047000" />
       <workItem from="1585047983758" duration="6268000" />
       <workItem from="1585123163378" duration="1795000" />
-      <workItem from="1585478461641" duration="2179000" />
+      <workItem from="1585478461641" duration="7826000" />
     </task>
     <servers />
   </component>

@@ -17,7 +17,7 @@ exports.renameRoles = functions.firestore
 exports.addStock = functions.firestore
     .document('products/{productID}')
     .onCreate((snapshot, context) => {
-
+        return difa.getStockController().addStock(snapshot, context);
     })
 
 // // Start writing Firebase Functions

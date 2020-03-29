@@ -1,4 +1,4 @@
 export interface Stock {
-    productName: string,
-    stock: number
+    productName: string;
+    stockAmount: number;
 }
