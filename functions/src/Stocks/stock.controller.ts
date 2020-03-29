@@ -3,4 +3,5 @@ import {EventContext} from "firebase-functions";
 
 export interface StockController {
     addStock(snapshot: DocumentSnapshot, context: EventContext): Promise<any>;
+    removeStock(snapshot: DocumentSnapshot, context: EventContext): Promise<any>;
 }

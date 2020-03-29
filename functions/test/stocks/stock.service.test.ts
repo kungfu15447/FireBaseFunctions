@@ -32,4 +32,20 @@ describe('StockService', () => {
         const stockPromise = await stockService.addStock(undefinedProduct);
         expect(stockPromise).toBeUndefined();
     })
+
+    it('Stock amount on stock is decreased by the amount purchased in order', async () => {
+        const stock: Stock = {productName: 't-shirt', stockAmount: 5};
+        const amount = 3;
+        const expectedValue = stock.stockAmount - amount;
+        stockService.subtrackAmountfromStock(stock, amount);
+        expect(stock.stockAmount).toBe(expectedValue);
+    })
+
+    it('Stock amount on stock is never below zero when its subtracked with amount purchased in order', async () => {
+        const stock: Stock = {productName: 't-shirt', stockAmount: 1};
+        const amount = 3;
+        const expectedValue = 0;
+        stockService.subtrackAmountfromStock(stock, amount);
+        expect(stock.stockAmount).toBe(expectedValue);
+    })
 });

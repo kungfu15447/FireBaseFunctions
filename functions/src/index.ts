@@ -20,6 +20,12 @@ exports.addStock = functions.firestore
         return difa.getStockController().addStock(snapshot, context);
     })
 
+exports.removeStock = functions.firestore
+    .document('order/{orderID}')
+    .onCreate(((snapshot, context) => {
+        return difa.getStockController().removeStock(snapshot, context);
+    }))
+
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
 //

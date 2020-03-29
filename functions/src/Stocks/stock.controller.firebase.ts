@@ -3,6 +3,7 @@ import {DocumentSnapshot} from "firebase-functions/lib/providers/firestore";
 import {EventContext} from "firebase-functions";
 import {StockService} from "./stock.service";
 import {Product} from "../Models/product.module";
+import {Order} from "../Models/order.module";
 
 export class StockControllerFirebase implements StockController {
 
@@ -10,6 +11,11 @@ export class StockControllerFirebase implements StockController {
     addStock(snapshot: DocumentSnapshot, context: EventContext): Promise<any> {
         const product = snapshot.data() as Product;
         return this.stockService.addStock(product);
+    }
+
+    removeStock(snapshot: DocumentSnapshot, context: EventContext): Promise<any> {
+        const order = snapshot.data() as Order;
+        return this.stockService.removeStock(order);
     }
 
 }
