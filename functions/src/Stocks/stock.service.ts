@@ -19,11 +19,25 @@ export class StockService {
     }
 
     removeStock(order: Order): Promise<any> {
-        return this.stockRepository.updateStockFromOrder(order);
+        order.orderLines.forEach(orderLine => {
+            const stockPromise = this.stockRepository.getStockByID(orderLine.productID);
+            stockPromise.then(stock => {
+                if (stock) {
+                    this.subtrackAmountfromStock(stock, orderLine.amount);
+                    return this.stockRepository.updateStock(orderLine.productID, stock);
+                }else {
+                    return null;
+                }
+            }).catch(error => {
+                throw new TypeError('Could not retrieve Promise with stock');
+            })
+        });
+        return Promise.resolve();
     }
 
     createStockWithAmount(product: Product): Stock {
         const stock: Stock = {
+            productID: product.productID,
             productName: product.name,
             stockAmount: this.defaultStockAmount
         };

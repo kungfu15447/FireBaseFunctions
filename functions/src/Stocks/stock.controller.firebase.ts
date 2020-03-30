@@ -10,6 +10,7 @@ export class StockControllerFirebase implements StockController {
     constructor(private stockService: StockService) {}
     addStock(snapshot: DocumentSnapshot, context: EventContext): Promise<any> {
         const product = snapshot.data() as Product;
+        product.productID = snapshot.id;
         return this.stockService.addStock(product);
     }
 

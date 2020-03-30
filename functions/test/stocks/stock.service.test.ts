@@ -7,8 +7,9 @@ import {Stock} from '../../src/Models/stock.module';
 describe('StockService', () => {
    let stockRepository: IMock<StockRepository>;
    let stockService: StockService;
-   let product: Product = { name: 't-shirt', price: 250};
-   let stock: Stock = { productName: 't-shirt', stockAmount: 5};
+   let productID = 'id';
+   let product: Product = { productID: productID, name: 't-shirt', price: 250};
+   let stock: Stock = { productID: productID, productName: 't-shirt', stockAmount: 5};
    beforeEach(() => {
       stockRepository = new Mock<StockRepository>()
           .setup(sr => sr.addStock(stock))
@@ -34,7 +35,7 @@ describe('StockService', () => {
     })
 
     it('Stock amount on stock is decreased by the amount purchased in order', async () => {
-        const stock: Stock = {productName: 't-shirt', stockAmount: 5};
+        const stock: Stock = {productID: productID, productName: 't-shirt', stockAmount: 5};
         const amount = 3;
         const expectedValue = stock.stockAmount - amount;
         stockService.subtrackAmountfromStock(stock, amount);
@@ -42,7 +43,7 @@ describe('StockService', () => {
     })
 
     it('Stock amount on stock is never below zero when its subtracked with amount purchased in order', async () => {
-        const stock: Stock = {productName: 't-shirt', stockAmount: 1};
+        const stock: Stock = {productID: productID, productName: 't-shirt', stockAmount: 1};
         const amount = 3;
         const expectedValue = 0;
         stockService.subtrackAmountfromStock(stock, amount);
