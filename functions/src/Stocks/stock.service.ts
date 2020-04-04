@@ -35,6 +35,10 @@ export class StockService {
         return Promise.resolve();
     }
 
+    renameStocks(productBefore: Product, productAfter: Product): Promise<any> {
+        return this.stockRepository.renameStocks(productBefore, productAfter);
+    }
+
     createStockWithAmount(product: Product): Stock {
         const stock: Stock = {
             productID: product.productID,

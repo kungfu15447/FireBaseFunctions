@@ -1,6 +1,6 @@
 import {StockController} from "./stock.controller";
 import {DocumentSnapshot} from "firebase-functions/lib/providers/firestore";
-import {EventContext} from "firebase-functions";
+import {Change, EventContext} from "firebase-functions";
 import {StockService} from "./stock.service";
 import {Product} from "../Models/product.module";
 import {Order} from "../Models/order.module";
@@ -17,6 +17,12 @@ export class StockControllerFirebase implements StockController {
     removeStock(snapshot: DocumentSnapshot, context: EventContext): Promise<any> {
         const order = snapshot.data() as Order;
         return this.stockService.removeStock(order);
+    }
+
+    renameStock(snapshot: Change<DocumentSnapshot>, context: EventContext): Promise<any> {
+        const productBefore = snapshot.before.data() as Product;
+        const productAfter = snapshot.after.data() as Product;
+        return this.stockService.renameStocks(productBefore, productAfter);
     }
 
 }
