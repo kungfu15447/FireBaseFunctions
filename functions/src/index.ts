@@ -22,9 +22,19 @@ exports.addStock = functions.firestore
 
 exports.decreaseStockByAmount = functions.firestore
     .document('orders/{orderID}')
-    .onCreate(((snapshot, context) => {
+    .onCreate((snapshot, context) => {
         return difa.getStockController().removeStock(snapshot, context);
-    }))
+    })
+
+exports.renameProducts = functions.firestore
+    .document('products/{productID}')
+    .onUpdate((snapshot, context) => {
+        difa.getStockController().renameStock(snapshot, context).then(succes => {
+            return difa.getOrderController().renameProductsInOrderLines(snapshot, context);
+        }).catch(error => {
+            throw new TypeError(error);
+        });
+    })
 
 // // Start writing Firebase Functions
 // // https://firebase.google.com/docs/functions/typescript
