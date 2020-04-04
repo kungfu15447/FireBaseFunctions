@@ -23,8 +23,8 @@ describe('StockService', () => {
 
     it('StockRepository method addStock is called only once in StockService addStock method', async () => {
         await stockService.addStock(product);
-        stockRepository.verify(sr => sr.addStock(stock),
-            Times.Exactly(1));
+        stockRepository.verify(sr => sr.addStock(stock)),
+            Times.Exactly(1);
     })
 
     it('If product is undefined in addStock parameter, return promise with undefined', async () => {
