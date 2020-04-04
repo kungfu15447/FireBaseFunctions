@@ -29,7 +29,7 @@ export class StockService {
                     return null;
                 }
             }).catch(error => {
-                throw new TypeError('Could not retrieve Promise with stock');
+                throw new TypeError(error);
             })
         });
         return Promise.resolve();

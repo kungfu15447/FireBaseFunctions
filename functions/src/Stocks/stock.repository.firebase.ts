@@ -6,10 +6,9 @@ export class StockRepositoryFirebase implements StockRepository {
 
     addStock(stock: Stock): Promise<any> {
         const stockCollection = this.db().collection('stocks');
-        return stockCollection.doc().set({
+        return stockCollection.doc(stock.productID).set({
             productName: stock.productName,
-            stockAmount: stock.stockAmount,
-            productID: stock.productID
+            stockAmount: stock.stockAmount
         });
     }
 
@@ -25,13 +24,13 @@ export class StockRepositoryFirebase implements StockRepository {
                 stock = doc.data() as Stock;
             }
         }).catch(error => {
-            throw new TypeError('Could not retrieve document');
+            //throw new TypeError('Could not retrieve document');
         });
         return Promise.resolve(stock);
     }
 
     async updateStock(productID: string, stock: Stock): Promise<any> {
-        const stockRef = this.db().collection('stock').doc(productID);
+        const stockRef = this.db().collection('stocks').doc(productID);
         await stockRef.update(stock);
         return Promise.resolve();
     }
