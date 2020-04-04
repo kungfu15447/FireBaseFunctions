@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/functions/test/stocks/stock.service.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/functions/test/stocks/stock.service.test.ts" afterDir="false" />
-    </list>
+    <list default="true" id="aeac73a5-1bf7-4a3d-8316-81243f583582" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
       <workItem from="1585558475911" duration="3938000" />
       <workItem from="1585657882657" duration="644000" />
       <workItem from="1585996935201" duration="7667000" />
-      <workItem from="1586014444912" duration="1349000" />
+      <workItem from="1586014444912" duration="1522000" />
     </task>
     <servers />
   </component>
